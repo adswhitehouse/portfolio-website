@@ -57,6 +57,7 @@ body {
   font-family: "Space Grotesk", sans-serif;
   background: url(./images/background.png) no-repeat center center / cover;
   color: #fefefe;
+  background-attachment: fixed;
 }
 
 /* Header */
@@ -65,6 +66,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 4rem;
 }
 
 header img {
@@ -91,9 +93,67 @@ header nav a::after {
   left: 0;
   right: 100%;
   transition: right 0.5s;
-  
 }
 
 header nav a:hover:after {
   right: 0;
+}
+
+/* Hero */
+.hero {
+  padding-inline: 10vw;
+  height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero p {
+  font-size: 2.5rem;
+}
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+.hero h1 span {
+  color: #ff004f;
+}
+
+/* About Me */
+.about-me {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-inline: 10vw;
+  background-color: #010201;
+}
+
+.about-me-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.about-me-img {
+  min-width: 25rem;
+  border-radius: 1rem;
+}
+
+.about-me-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-headers {
+  display: flex;
+  gap: 2rem;
+  margin-block: 1rem 2rem;
+}
+
+.info-content h4 {
+  color: #ff004f;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 1rem;
 }
