@@ -1,0 +1,75 @@
+// About me section
+  // Variables
+    // Text elements
+let skills = document.querySelector(".jsSkills");
+let experience = document.querySelector(".jsExperience");
+let education = document.querySelector(".jsEducation");
+let infoTitle1 = document.querySelector(".jsInfoTitle1");
+let infoTitle2 = document.querySelector(".jsInfoTitle2");
+let infoTitle3 = document.querySelector(".jsInfoTitle3");
+let infoTitle4 = document.querySelector(".jsInfoTitle4");
+let info1 = document.querySelector(".jsInfo1");
+let info2 = document.querySelector(".jsInfo2");
+let info3 = document.querySelector(".jsInfo3");
+let info4 = document.querySelector(".jsInfo4");
+    // Decoration elements
+let skillsSpan = document.querySelector(".jsSkillsSpan")
+let experienceSpan = document.querySelector(".jsExperienceSpan")
+let educationSpan = document.querySelector(".jsEducationSpan")
+
+// Displays skills sub-content, adds animation to skills heading and removes animation from other headings
+function displaySkills() {
+  skillsSpan.style.right = "50%"
+  experienceSpan.style.right = "100%"
+  educationSpan.style.right = "100%"
+  infoTitle1.textContent = "UI/UX";
+  infoTitle2.textContent = "Web Development";
+  infoTitle3.textContent = "App Development";
+  infoTitle4.textContent = "";
+  info1.textContent = "Designing web/app interfaces.";
+  info2.textContent = "Web app development.";
+  info3.textContent = "Building Android/iOS apps.";
+  info4.textContent = "";
+}
+
+skills.addEventListener("click", () => {
+  displaySkills();
+});
+// Displays skills sub-content by default
+displaySkills();
+
+// Displays experience sub-content, adds animation to experience heading and removes animation from other headings
+function displayExperience() {
+  experienceSpan.style.right = "50%"
+  skillsSpan.style.right = "100%"
+  educationSpan.style.right = "100%"
+  infoTitle1.textContent = "2021 - Current";
+  infoTitle2.textContent = "2019 - 2021";
+  infoTitle3.textContent = "2017 - 2019";
+  infoTitle4.textContent = "2016 - 2017";
+  info1.textContent = "UI/UX design training at ET institute.";
+  info2.textContent = "Team lead at StarApp LLC.";
+  info3.textContent = "UI/UX design executive at Coin Digital Ltd.";
+  info4.textContent = "Internship at ekart eCommerce.";
+}
+experience.addEventListener("click", () => {
+  displayExperience();
+});
+
+// Displays education sub-content, adds animation to education heading and removes animation from other headings
+function displayEducation() {
+  educationSpan.style.right = "50%"
+  skillsSpan.style.right = "100%"
+  experienceSpan.style.right = "100%"
+  infoTitle1.textContent = "2016";
+  infoTitle2.textContent = "2016";
+  infoTitle3.textContent = "2014";
+  infoTitle4.textContent = "";
+  info1.textContent = "UI/UX design training at ET Institute.";
+  info2.textContent = "MBA from MIT Bangalore.";
+  info3.textContent = "BBA from ISM Bangalore";
+  info4.textContent = "";
+}
+education.addEventListener("click", () => {
+  displayEducation();
+});

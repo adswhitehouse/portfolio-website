@@ -52,6 +52,12 @@ select {
 }
 /* CSS Reset */
 
+/* HTML */
+html {
+  scroll-behavior: smooth;
+
+}
+
 /* Body */
 body {
   font-family: "Space Grotesk", sans-serif;
@@ -136,7 +142,7 @@ header nav a:hover:after {
 }
 
 .about-me-img {
-  min-width: 25rem;
+  width: 25rem;
   border-radius: 1rem;
 }
 
@@ -145,10 +151,26 @@ header nav a:hover:after {
   margin-bottom: 1rem;
 }
 
-.info-headers {
+.info-headings {
   display: flex;
-  gap: 2rem;
-  margin-block: 1rem 2rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.info-title {
+  position: relative;
+  cursor: pointer;
+
+}
+
+.info-span {
+  background-color: #ff004f;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 100%;
+  transition: right 0.5s;
 }
 
 .info-content h4 {
