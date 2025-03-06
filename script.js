@@ -99,14 +99,29 @@ downloadCV.addEventListener("click", () => {
 });
 
 // Nav Menu
-let menu = document.querySelector(".jsMenu")
-let ul = document.querySelector(".jsNavUl")
-let header = document.querySelector("header")
+// Variables
+let menu = document.querySelector(".jsMenu");
+let ul = document.querySelector(".jsNavUl");
+let header = document.querySelector("header");
+
+// Toggles nav on menu click
 menu.addEventListener("click", () => {
-  ul.classList.toggle("show-nav")
-})
+  menu.classList.toggle("rotate");
+  ul.classList.toggle("show-nav");
+});
+
+// Hides nav when clicked away from
 window.addEventListener("click", (e) => {
   if (!header.contains(e.target)) {
-    ul.classList.remove("show-nav")
+    menu.classList.remove("rotate");
+    ul.classList.remove("show-nav");
   }
-})
+});
+
+// Hides nav if nav link is clicked
+ul.addEventListener("click", (e) => {
+  if (e.target !== e.currentTarget) {
+    menu.classList.remove("rotate");
+    ul.classList.remove("show-nav");
+  }
+});

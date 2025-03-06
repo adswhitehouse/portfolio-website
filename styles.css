@@ -60,7 +60,7 @@ html {
 /* Body */
 body {
   font-family: "Space Grotesk", sans-serif;
-  background: url(./images/background.png) no-repeat center center / cover;
+  background: url(./images/background.png) no-repeat right 40% center / cover;
   color: #fefefe;
   background-attachment: fixed;
 }
@@ -156,6 +156,7 @@ header nav a:hover:after {
 
 .about-me-img {
   max-width: 22.5rem;
+  width: 100%;
   border-radius: 0.5rem;
   height: 100%;
 }
@@ -167,7 +168,7 @@ header nav a:hover:after {
 
 .info-headings {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-top: 2rem;
 }
 
@@ -433,6 +434,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-inline: 10vw;
+  font-size: 0.75rem;
 }
 
 footer i {
@@ -476,28 +479,36 @@ footer i {
   font-size: 1.5rem;
 }
 
-/* Media Query */
+/* Media Queries */
 @media screen and (max-width: 55rem) {
   /* Header */
   header {
     flex-direction: column;
     align-items: flex-start;
-    width: 100vw;
     padding-inline: 0;
   }
 
   header img {
-  margin-left: 10vw;
+    margin-left: 10vw;
   }
 
   .menu {
     display: block;
+    transition: transform 0.5s, color 0.5s;
+  }
+
+  .rotate {
+    transform: rotate(90deg);
+    color: #ff004f;
+  }
+
+  header nav {
+    width: 100%;
   }
 
   header nav ul {
     flex-direction: column;
     gap: 0;
-    width: 100vw;
     background-color: #010201;
     height: 0;
     overflow: hidden;
@@ -509,7 +520,6 @@ footer i {
   }
 
   header nav ul li a {
-    width: 100vw;
     display: block;
     padding-left: 10vw;
     padding-block: 0.25rem;
@@ -520,5 +530,68 @@ footer i {
     height: 100%;
     bottom: 0;
     z-index: -1;
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: -20vh;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+
+  /* About Me */
+  .about-me {
+    height: auto;
+    padding-top: 10vh;
+  }
+
+  .about-me-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-me h2 {
+    font-size: 1.5rem;
+  }
+
+  /* My Services */
+  .my-services {
+    height: auto;
+    padding-top: 10vh;
+  }
+
+  .service-boxes {
+    flex-wrap: wrap;
+  }
+
+  .my-services h2 {
+    font-size: 1.5rem;
+  }
+
+  /* My Work */
+  .my-work {
+    height: auto;
+    padding-top: 10vh;
+  }
+
+  .my-work-boxes {
+    flex-wrap: wrap;
+  }
+
+  .my-work h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Contact */
+  .contact {
+    padding-top: 10vh;
+    flex-direction: column;
+  }
+
+  .contact h2 {
+    font-size: 1.5rem;
   }
 }
