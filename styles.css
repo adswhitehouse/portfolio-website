@@ -172,24 +172,29 @@ header nav a:hover:after {
   margin-top: 2rem;
 }
 
-.info-title {
+.info-heading {
   position: relative;
   cursor: pointer;
 }
 
-.info-span {
-  background-color: #ff004f;
-  height: 3px;
+.info-heading::after {
+  content: "";
   position: absolute;
-  bottom: -5px;
+  height: 3px;
   left: 0;
-  right: 100%;
-  transition: right 0.5s;
+  width: 0%;
+  background-color: #ff004f;
+  bottom: -5px;
+  transition: width 0.5s;
+}
+
+.active::after {
+  width: 50%;
 }
 
 .info-content h4 {
   color: #ff004f;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1rem;
   margin-top: 1rem;
 }

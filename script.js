@@ -13,15 +13,12 @@ let info2 = document.querySelector(".jsInfo2");
 let info3 = document.querySelector(".jsInfo3");
 let info4 = document.querySelector(".jsInfo4");
 // Decoration elements
-let skillsSpan = document.querySelector(".jsSkillsSpan");
-let experienceSpan = document.querySelector(".jsExperienceSpan");
-let educationSpan = document.querySelector(".jsEducationSpan");
 
 // Displays skills sub-content, adds animation to skills heading and removes animation from other headings
 function displaySkills() {
-  skillsSpan.style.right = "50%";
-  experienceSpan.style.right = "100%";
-  educationSpan.style.right = "100%";
+  skills.classList.add("active");
+  experience.classList.remove("active");
+  education.classList.remove("active");
   infoTitle1.textContent = "UI/UX";
   infoTitle2.textContent = "Web Development";
   infoTitle3.textContent = "App Development";
@@ -40,9 +37,9 @@ displaySkills();
 
 // Displays experience sub-content, adds animation to experience heading and removes animation from other headings
 function displayExperience() {
-  experienceSpan.style.right = "50%";
-  skillsSpan.style.right = "100%";
-  educationSpan.style.right = "100%";
+  experience.classList.add("active");
+  skills.classList.remove("active");
+  education.classList.remove("active");
   infoTitle1.textContent = "2021 - Current";
   infoTitle2.textContent = "2019 - 2021";
   infoTitle3.textContent = "2017 - 2019";
@@ -58,9 +55,9 @@ experience.addEventListener("click", () => {
 
 // Displays education sub-content, adds animation to education heading and removes animation from other headings
 function displayEducation() {
-  educationSpan.style.right = "50%";
-  skillsSpan.style.right = "100%";
-  experienceSpan.style.right = "100%";
+  education.classList.add("active");
+  skills.classList.remove("active");
+  experience.classList.remove("active");
   infoTitle1.textContent = "2016";
   infoTitle2.textContent = "2016";
   infoTitle3.textContent = "2014";
