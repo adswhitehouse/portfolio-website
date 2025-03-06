@@ -77,10 +77,7 @@ education.addEventListener("click", () => {
 // Back to top btn is visible when page is scrolled to bottom
 let backToTop = document.querySelector(".jsBackToTop");
 window.addEventListener("scroll", () => {
-  if (
-    window.innerHeight + window.scrollY >=
-    document.documentElement.scrollHeight
-  ) {
+  if (window.scrollY > 1000) {
     backToTop.style.opacity = "1";
   } else {
     backToTop.style.opacity = "0";

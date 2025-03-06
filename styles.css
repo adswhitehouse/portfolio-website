@@ -145,7 +145,7 @@ header nav a:hover:after {
 .about-me {
   height: 100vh;
   padding-inline: 10vw;
-  padding-top: 17.5vh;
+  padding-top: 7.5rem;
   background-color: #010201;
 }
 
@@ -342,7 +342,7 @@ header nav a:hover:after {
   display: flex;
   padding-inline: 10vw;
   background-color: #010201;
-  padding-bottom: 10vh;
+  padding-bottom: 2rem;
   gap: 1.5rem;
 }
 
@@ -560,7 +560,7 @@ footer i {
   /* My Services */
   .my-services {
     height: auto;
-    padding-top: 10vh;
+    padding-top: 7.5rem;
   }
 
   .service-boxes {
@@ -574,7 +574,7 @@ footer i {
   /* My Work */
   .my-work {
     height: auto;
-    padding-top: 10vh;
+    padding-top: 7.5rem;
   }
 
   .my-work-boxes {
@@ -587,7 +587,7 @@ footer i {
 
   /* Contact */
   .contact {
-    padding-top: 10vh;
+    padding-top: 7.5rem;
     flex-direction: column;
   }
 
