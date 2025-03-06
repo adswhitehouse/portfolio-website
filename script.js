@@ -81,8 +81,32 @@ window.addEventListener("scroll", () => {
     window.innerHeight + window.scrollY >=
     document.documentElement.scrollHeight
   ) {
-    backToTop.style.visibility = "visible";
+    backToTop.style.opacity = "1";
   } else {
-    backToTop.style.visibility = "hidden";
+    backToTop.style.opacity = "0";
   }
 });
+
+// Download CV
+let downloadCV = document.querySelector(".jsDownloadCV");
+downloadCV.addEventListener("click", () => {
+  let link = document.createElement("a");
+  link.href = "images/my-cv.pdf";
+  link.download = "my-cv.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
+
+// Nav Menu
+let menu = document.querySelector(".jsMenu")
+let ul = document.querySelector(".jsNavUl")
+let header = document.querySelector("header")
+menu.addEventListener("click", () => {
+  ul.classList.toggle("show-nav")
+})
+window.addEventListener("click", (e) => {
+  if (!header.contains(e.target)) {
+    ul.classList.remove("show-nav")
+  }
+})
