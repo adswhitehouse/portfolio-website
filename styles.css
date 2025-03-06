@@ -130,7 +130,7 @@ header nav a:hover:after {
 .about-me {
   height: 100vh;
   padding-inline: 10vw;
-  padding-top: 20vh;
+  padding-top: 17.5vh;
   background-color: #010201;
 }
 
@@ -182,7 +182,10 @@ header nav a:hover:after {
 .my-services {
   background-color: #010201;
   padding-inline: 10vw;
-  padding-block: 5vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .my-services h2 {
@@ -316,4 +319,144 @@ header nav a:hover:after {
 
 .see-more:hover {
   background-color: #ff004f;
+}
+
+/* Contact */
+.contact {
+  display: flex;
+  padding-inline: 10vw;
+  background-color: #010201;
+  padding-bottom: 10vh;
+  gap: 1.5rem;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-info div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-info div i {
+  color: #ff004f;
+  font-size: 2rem;
+}
+
+.social-links {
+  position: relative;
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.social-links a i {
+  color: #9f9f9f;
+  position: absolute;
+  bottom: 0;
+  transition: bottom 0.25s, color 0.25s;
+}
+
+.social-links a i:hover {
+  color: #ff004f;
+  bottom: 5px;
+}
+
+.social-links a {
+  margin-right: 2rem;
+}
+
+.download-cv,
+form button {
+  background-color: #ff004f;
+  border: none;
+  color: #fefefe;
+  width: 10rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+form input {
+  background-color: #262626;
+  border: 0;
+  outline: 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #fefefe;
+}
+
+form textarea {
+  resize: none;
+  background-color: #262626;
+  border: 0;
+  outline: 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #fefefe;
+}
+
+/* Footer */
+footer {
+  background-color: #262626;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer i {
+  color: #ff004f;
+  margin-inline: 0.5rem;
+}
+
+/* Back To Top Link */
+.back-to-top {
+  position: fixed;
+  bottom: 4rem;
+  right: 1rem;
+  z-index: 5;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #ff004f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  visibility: hidden;
+
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.back-to-top i {
+  color: #fefefe;
+  font-size: 1.5rem;
 }
