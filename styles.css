@@ -55,7 +55,6 @@ select {
 /* HTML */
 html {
   scroll-behavior: smooth;
-
 }
 
 /* Body */
@@ -130,9 +129,8 @@ header nav a:hover:after {
 /* About Me */
 .about-me {
   height: 100vh;
-  display: flex;
-  align-items: center;
   padding-inline: 10vw;
+  padding-top: 20vh;
   background-color: #010201;
 }
 
@@ -142,8 +140,9 @@ header nav a:hover:after {
 }
 
 .about-me-img {
-  width: 25rem;
-  border-radius: 1rem;
+  max-width: 22.5rem;
+  border-radius: 0.5rem;
+  height: 100%;
 }
 
 .about-me-content h2 {
@@ -160,7 +159,6 @@ header nav a:hover:after {
 .info-title {
   position: relative;
   cursor: pointer;
-
 }
 
 .info-span {
@@ -184,7 +182,7 @@ header nav a:hover:after {
 .my-services {
   background-color: #010201;
   padding-inline: 10vw;
-  padding-bottom: 20vh;
+  padding-block: 5vh;
 }
 
 .my-services h2 {
@@ -218,5 +216,104 @@ header nav a:hover:after {
 
 .service-box a {
   text-decoration: none;
-  color: #fff;
+  color: #fefefe;
+}
+
+/* My Work */
+.my-work {
+  height: 100vh;
+  background-color: #010201;
+  padding-inline: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.my-work h2 {
+  font-size: 2.5rem;
+}
+
+.my-work-boxes {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.my-work-box-content {
+  position: absolute;
+  background: linear-gradient(to top, rgba(255, 0, 79, 1), rgba(0, 0, 0, 0.75));
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  bottom: 0;
+  top: 100%;
+  transition: top 0.5s;
+  padding-inline: 1rem;
+  border-radius: 0.5rem;
+}
+
+.my-work-box-1:hover .my-work-box-content {
+  top: 0;
+}
+
+.my-work-box-2:hover .my-work-box-content {
+  top: 0;
+}
+
+.my-work-box-3:hover .my-work-box-content {
+  top: 0;
+}
+
+.my-work-box-content a {
+  width: 4rem;
+  height: 4rem;
+  background-color: #fefefe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+.my-work-box-content a i {
+  color: rgb(255, 0, 79);
+  font-size: 1.5rem;
+}
+
+.my-work-box {
+  height: 30rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.my-work-box-1 {
+  background: url(./images/work-1.png) no-repeat center center / cover;
+}
+
+.my-work-box-2 {
+  background: url(./images/work-2.png) no-repeat center center / cover;
+}
+
+.my-work-box-3 {
+  background: url(./images/work-3.png) no-repeat center center / cover;
+}
+
+.see-more {
+  align-self: center;
+  text-decoration: none;
+  color: #fefefe;
+  border: 1px solid #ff004f;
+  border-radius: 0.25rem;
+  padding: 0.5rem 3rem;
+  text-align: center;
+  transition: background-color 0.25s;
+}
+
+.see-more:hover {
+  background-color: #ff004f;
 }
