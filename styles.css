@@ -96,13 +96,13 @@ header nav a::after {
   height: 3px;
   position: absolute;
   bottom: -3px;
+  width: 0%;
   left: 0;
-  right: 100%;
-  transition: right 0.5s;
+  transition: width 0.5s;
 }
 
 header nav a:hover:after {
-  right: 0;
+  width: 100%;
 }
 
 .menu {
