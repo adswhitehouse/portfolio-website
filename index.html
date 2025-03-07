@@ -127,24 +127,24 @@
   <section class="contact" id="contact">
     <div class="contact-info">
       <h2>Contact Me</h2>
-      <div><i class="fa-solid fa-paper-plane"></i>
+      <div class="contact-email"><i class="fa-solid fa-paper-plane"></i>
         <p>contact@example.com</p>
       </div>
-      <div><i class="fa-solid fa-square-phone"></i>
+      <div class="contact-number"><i class="fa-solid fa-square-phone"></i>
         <p>0123456789</p>
       </div>
       <div class="social-links">
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
       <button class="download-cv jsDownloadCV">Download CV</button>
     </div>
     <form action="submit">
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <textarea rows="8" placeholder="Your Message"></textarea>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea rows="8" name="message" placeholder="Your Message"></textarea>
       <button type="submit">Submit</button>
     </form>
   </section>

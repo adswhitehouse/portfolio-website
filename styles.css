@@ -319,9 +319,6 @@ header nav a:hover:after {
   align-items: center;
   justify-content: center;
   margin-inline: auto;
-}
-
-.my-work-box-content a i {
   color: rgb(255, 0, 79);
   font-size: 1.5rem;
 }
@@ -349,7 +346,7 @@ header nav a:hover:after {
   display: flex;
   padding-inline: 10vw;
   background-color: #010201;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
   gap: 1.5rem;
   padding-top: 3.5rem;
 }
@@ -358,44 +355,36 @@ header nav a:hover:after {
   font-size: 2.5rem;
 }
 
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.contact-info div {
+.contact-email,
+.contact-number {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-block: 1.5rem;
 }
 
-.contact-info div i {
+.contact-email i,
+.contact-number i {
   color: #ff004f;
   font-size: 2rem;
 }
 
 .social-links {
-  position: relative;
-  margin-top: 1.5rem;
   display: flex;
-  gap: 2rem;
-}
-
-.social-links a i {
-  color: #9f9f9f;
-  position: absolute;
-  bottom: 0;
-  transition: bottom 0.25s, color 0.25s;
-}
-
-.social-links a i:hover {
-  color: #ff004f;
-  bottom: 5px;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
 }
 
 .social-links a {
-  margin-right: 2rem;
+  font-size: 2rem;
+  position: relative;
+  color: #a3a3a3;
+  transition: color 0.25s, transform 0.25s;
+}
+
+.social-links a:hover {
+  transform: translateY(-5px);
+  color: #ff004f;
 }
 
 .download-cv,
