@@ -71,7 +71,7 @@ education.addEventListener("click", () => {
   displayEducation();
 });
 
-// Back to top btn is visible when page is scrolled to bottom
+// Back to top btn is visible when page is scrolled
 let backToTop = document.querySelector(".jsBackToTop");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 1000) {
@@ -82,15 +82,15 @@ window.addEventListener("scroll", () => {
 });
 
 // Download CV
-let downloadCV = document.querySelector(".jsDownloadCV");
-downloadCV.addEventListener("click", () => {
-  let link = document.createElement("a");
-  link.href = "images/my-cv.pdf";
-  link.download = "my-cv.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-});
+// let downloadCV = document.querySelector(".jsDownloadCV");
+// downloadCV.addEventListener("click", () => {
+//   let link = document.createElement("a");
+//   link.href = "images/my-cv.pdf";
+//   link.download = "my-cv.pdf";
+//   document.body.appendChild(link);
+//   link.click();
+//   document.body.removeChild(link);
+// });
 
 // Nav Menu
 // Variables
@@ -104,17 +104,9 @@ menu.addEventListener("click", () => {
   ul.classList.toggle("show-nav");
 });
 
-// Hides nav when clicked away from
+// Hides nav when header is clicked away from and when nav is clicked
 window.addEventListener("click", (e) => {
-  if (!header.contains(e.target)) {
-    menu.classList.remove("rotate");
-    ul.classList.remove("show-nav");
-  }
-});
-
-// Hides nav if nav link is clicked
-ul.addEventListener("click", (e) => {
-  if (e.target !== e.currentTarget) {
+  if (!header.contains(e.target) || ul.contains(e.target)) {
     menu.classList.remove("rotate");
     ul.classList.remove("show-nav");
   }

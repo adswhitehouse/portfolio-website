@@ -347,8 +347,9 @@ header nav a:hover:after {
   padding-inline: 10vw;
   background-color: #010201;
   padding-bottom: 1.5rem;
-  gap: 1.5rem;
+  justify-content: space-between;
   padding-top: 3.5rem;
+  gap: 1.5rem;
 }
 
 .contact h2 {
@@ -387,7 +388,18 @@ header nav a:hover:after {
   color: #ff004f;
 }
 
-.download-cv,
+.download-cv {
+  width: 10rem;
+  height: 2.5rem;
+  background-color: #ff004f;
+  display: flex;
+  border-radius: 0.25rem;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fefefe;
+}
+
 form button {
   background-color: #ff004f;
   border: none;
@@ -402,10 +414,12 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 100%;
+  width: 66%;
+  position: relative;
 }
 
-form input {
+form input,
+form textarea {
   background-color: #262626;
   border: 0;
   outline: 0;
@@ -416,12 +430,13 @@ form input {
 
 form textarea {
   resize: none;
-  background-color: #262626;
-  border: 0;
-  outline: 0;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  color: #fefefe;
+}
+
+form p {
+  color: green;
+  position: absolute;
+  bottom: 40px;
+  visibility: hidden;
 }
 
 /* Footer */
@@ -571,5 +586,9 @@ footer i {
 
   .contact h2 {
     font-size: 1.5rem;
+  }
+
+  form {
+    width: 100%;
   }
 }
