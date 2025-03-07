@@ -143,9 +143,8 @@ header nav a:hover:after {
 
 /* About Me */
 .about-me {
-  height: 100vh;
   padding-inline: 10vw;
-  padding-top: 7.5rem;
+  padding-top: 3.5rem;
   background-color: #010201;
 }
 
@@ -203,10 +202,7 @@ header nav a:hover:after {
 .my-services {
   background-color: #010201;
   padding-inline: 10vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding-top: 3.5rem;
 }
 
 .my-services h2 {
@@ -245,13 +241,9 @@ header nav a:hover:after {
 
 /* My Work */
 .my-work {
-  height: 100vh;
+  padding-top: 3.5rem;
   background-color: #010201;
   padding-inline: 10vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
 }
 
 .my-work h2 {
@@ -261,6 +253,15 @@ header nav a:hover:after {
 .my-work-boxes {
   display: flex;
   gap: 1.5rem;
+  margin-block: 2rem;
+}
+
+.my-work-box {
+  height: 30rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .my-work-box-content {
@@ -279,15 +280,33 @@ header nav a:hover:after {
   border-radius: 0.5rem;
 }
 
-.my-work-box-1:hover .my-work-box-content {
+.my-work-box::before {
+  content: "";
+  position: absolute;
   top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: transform 0.5s;
 }
 
-.my-work-box-2:hover .my-work-box-content {
-  top: 0;
+.my-work-box-1::before {
+  background: url(./images/work-1.png) no-repeat center center / cover;
 }
 
-.my-work-box-3:hover .my-work-box-content {
+.my-work-box-2::before {
+  background: url(./images/work-2.png) no-repeat center center / cover;
+}
+
+.my-work-box-3::before {
+  background: url(./images/work-3.png) no-repeat center center / cover;
+}
+
+.my-work-box:hover::before {
+  transform: scale(1.1);
+}
+
+.my-work-box:hover .my-work-box-content {
   top: 0;
 }
 
@@ -307,34 +326,17 @@ header nav a:hover:after {
   font-size: 1.5rem;
 }
 
-.my-work-box {
-  height: 30rem;
-  width: 100%;
-  border-radius: 0.5rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.my-work-box-1 {
-  background: url(./images/work-1.png) no-repeat center center / cover;
-}
-
-.my-work-box-2 {
-  background: url(./images/work-2.png) no-repeat center center / cover;
-}
-
-.my-work-box-3 {
-  background: url(./images/work-3.png) no-repeat center center / cover;
-}
-
 .see-more {
-  align-self: center;
   text-decoration: none;
   color: #fefefe;
   border: 1px solid #ff004f;
   border-radius: 0.25rem;
-  padding: 0.5rem 3rem;
-  text-align: center;
+  width: 10rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
   transition: background-color 0.25s;
 }
 
@@ -349,6 +351,7 @@ header nav a:hover:after {
   background-color: #010201;
   padding-bottom: 2rem;
   gap: 1.5rem;
+  padding-top: 3.5rem;
 }
 
 .contact h2 {
@@ -547,12 +550,6 @@ footer i {
     font-size: 1.5rem;
   }
 
-  /* About Me */
-  .about-me {
-    height: auto;
-    padding-top: 10vh;
-  }
-
   .about-me-container {
     flex-direction: column;
     align-items: center;
@@ -562,24 +559,12 @@ footer i {
     font-size: 1.5rem;
   }
 
-  /* My Services */
-  .my-services {
-    height: auto;
-    padding-top: 7.5rem;
-  }
-
   .service-boxes {
     flex-wrap: wrap;
   }
 
   .my-services h2 {
     font-size: 1.5rem;
-  }
-
-  /* My Work */
-  .my-work {
-    height: auto;
-    padding-top: 7.5rem;
   }
 
   .my-work-boxes {
@@ -592,7 +577,6 @@ footer i {
 
   /* Contact */
   .contact {
-    padding-top: 7.5rem;
     flex-direction: column;
   }
 
